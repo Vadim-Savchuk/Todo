@@ -1,0 +1,68 @@
+@import './normalize.css';
+
+:root {
+  --main-color: #ffffff;
+  --accent-color: #99f909;
+  --secondary-color: #000000;
+
+  --main-font: sans-serif;
+  --accent-font: sans-serif;
+}
+
+#root,
+.container {
+  min-height: 100vh;
+}
+
+body {
+  line-height: normal;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  background-color: var(--secondary-color);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 77.5rem;
+  padding: 0rem 1.25rem;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.main,
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Globals ===>  */
+.title {
+  font-size: 2rem;
+}
+
+.description {
+  line-height: 1.4;
+}
+
+.button {
+  flex: 1 1 50%;
+  font-size: 1.1rem;
+  text-align: center;
+  width: fit-content;
+  padding: 0.2rem 0.8rem;
+  color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--main-color);
+}
+
+.button:disabled {
+  background-color: #6a6a6a;
+  pointer-events: none;
+}
+
+.button:hover {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
